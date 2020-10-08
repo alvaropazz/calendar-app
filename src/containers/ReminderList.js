@@ -19,28 +19,28 @@ const openReminderList = (event, dispatch) => {
 
 let ReminderList = ({ day, reminders, dispatch }) => (
   <div>
-    <div className="centered ReminderList">
+    <div className="reminderList">
       <div className="weatherPanel">
         <WeatherCard day={day} />
       </div>
       <table className="ReminderListTable">
         <thead>
           <tr>
-            <th className="reminderTableTH">Name</th>
-            <th className="reminderTableTH">City</th>
-            <th className="reminderTableTH">Time</th>
-            <th className="reminderTableTH">Color</th>
-            <th className="reminderTableTH" />
+            <th>Name</th>
+            <th>City</th>
+            <th>Time</th>
+            <th>Color</th>
+            <th />
           </tr>
         </thead>
         <tbody>
           {reminders.map((item, index) => (
             <tr key={uuidv4()}>
-              <td className="reminderTableTD">{item.reminderText}</td>
-              <td className="reminderTableTD">{item.reminderCity}</td>
-              <td className="reminderTableTD">{item.reminderTime}</td>
-              <td className="reminderTableTD">{item.reminderColor}</td>
-              <td className="reminderTableTD">
+              <td>{item.reminderText}</td>
+              <td>{item.reminderCity}</td>
+              <td>{item.reminderTime}</td>
+              <td>{item.reminderColor}</td>
+              <td>
                 <button type="button" onClick={() => removeReminderItem(index, dispatch)}>
                   <span>x</span>
                 </button>
@@ -49,8 +49,8 @@ let ReminderList = ({ day, reminders, dispatch }) => (
           ))}
         </tbody>
       </table>
-      <div className="reminderCardFormDone reminderCardTableDone">
-        <button type="button" className="reminderCardFormDoneButton button" onClick={event => openReminderList(event, dispatch)}>
+      <div>
+        <button type="button" className="button" onClick={event => openReminderList(event, dispatch)}>
           Done
         </button>
       </div>

@@ -22,8 +22,8 @@ let Day = ({
   return (
     <time dateTime={day.format('YYYY-MM-DD')} className={timeClasses}>
       <div onClick={event => selectDay(event, day, dispatch)}>
-        <span className="caldate">{`${day.format('DD')} ${day.format('dddd')}`}</span>
-        {reminders.map(reminder => (<button type="button" key={uuidv4()} onClick={event => openReminderList(event, dispatch)}>{reminder.reminderText}</button>))}
+        <span className="calendarDate">{` ${day.format('dddd')}  ${day.format('DD')}`}</span>
+        {reminders.map(reminder => (<button className="reminderButton" type="button" key={uuidv4()} onClick={event => openReminderList(event, dispatch)}>{reminder.reminderText}</button>))}
       </div>
     </time>
   );

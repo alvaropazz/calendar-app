@@ -1,0 +1,181 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 40px auto;
+  height: 80vh;
+  width: 80vw;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 3px;
+  height: 70px;
+  align-items: center;
+  background: lightblue;
+  padding-right: 40px;
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: 30px;
+  color: #fff;
+}
+
+.section {
+  display: flex;
+  flex-flow: wrap;
+  font-size: 0;
+}
+
+.next,
+.previous {
+  cursor: pointer;
+  height: 3.4vh;
+  width: 5vw;
+  border: 1px solid white;
+  color: lightcoral;
+}
+
+.previous {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: 0;
+}
+
+.next {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.time {
+  flex: 1;
+  min-width: 14.2857%;
+  max-width: 14.2857vw;
+  position: relative;
+  font-size: 1.2vw;
+  line-height: 0;
+  border: 1px solid lightcyan;
+}
+
+.time.blank {
+  min-height: 10vh;
+}
+
+.calendarDate,
+.title {
+  position: absolute;
+}
+
+.calendarDate {
+  top: 20px;
+  left: 7px;
+}
+
+.blank .calendarDate {
+  color: #aaa;
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 20%;
+}
+
+.time:hover {
+  background: lightgrey;
+}
+
+.day_muted .calendarDate {
+  color: #ccc;
+}
+
+.time:not(.blank) .title,
+.time:not(.blank) .calendarDate {
+  color: #fff;
+}
+
+.day_selected {
+  background-color: lightsalmon;
+}
+
+.day_today {
+  background-color: lightcyan;
+}
+
+.button {
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+  position: relative;
+  height: 36px;
+  margin: 0;
+  min-width: 64px;
+  padding: 0 16px;
+  font-size: 14px;
+  letter-spacing: 0;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+}
+
+.addReminderButton {
+  border-radius: 4px;
+  font-size: 24px;
+  height: 56px;
+  margin: auto;
+  min-width: 56px;
+  width: 56px;
+  padding: 0;
+  background: crimson;
+  color: #fff;
+}
+
+.reminderCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  position: absolute;
+  padding: 10px;
+  top: 40px;
+}
+
+.reminderList {
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  position: absolute;
+  padding: 10px;
+  top: 40px;
+}
+
+.weatherPanel {
+  background-color: lavenderblush;
+  width: 250px;
+}
+
+input {
+  width: 250px;
+}
+
+.reminderButton {
+  width: 100%;
+  font-size: 5px;
+  border: none;
+}

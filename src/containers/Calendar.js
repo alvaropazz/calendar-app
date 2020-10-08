@@ -18,18 +18,18 @@ let Calendar = ({ calendarData, reminderData }) => {
   return (
     <div className="calendar">
       <header className="header">
-        <span className="headerSpan">
-          {headerText}
-        </span>
+        {renderAddReminderButton(day)}
+        {headerText}
+        <div>
         <PreviousMonthButton month={month} />
         <NextMonthButton month={month} />
+        </div>
       </header>
       <main>
         <section className="section">
           {renderCalendarWeeks(calendarRanges, day, month, reminders, reminderData)}
         </section>
       </main>
-      {renderAddReminderButton(day)}
       {renderReminderPanel(reminderData)}
       {renderReminderList(day, showRemindersDisplay, remindersArray)}
     </div>

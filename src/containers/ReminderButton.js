@@ -7,7 +7,7 @@ const showReminderPanel = (day, dispatch) => {
 };
 
 let ReminderButton = ({ day, dispatch }) => (
-  <div className="reminderButton">
+  <div>
     <button type="button" className="button addReminderButton" onClick={() => showReminderPanel(day, dispatch)}>
       <span>+</span>
     </button>

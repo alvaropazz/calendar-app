@@ -40,31 +40,27 @@ let ReminderSet = ({ reminderData, dispatch }) => {
   const rColor = reminder[reminderIndex].reminderColor || '';
   return (
     <form>
-      <div className="reminderCard centered">
-        <div className="reminderCardPanel">
-          <div className="weatherPanel weatherPanelStatic">
+      <div className="reminderCard">
+        <div>
+          <div className="weatherPanel">
             <WeatherCard day={day} />
           </div>
         </div>
         <div className="reminderCardForm">
-          <div className="reminderCardFormRow">
-            <label className="reminderCardFormLabel">Text:</label>
-            <input className="reminderCardFormInput" name="text" type="text" value={rText} onChange={event => setText(event, reminderIndex, dispatch)} required />
+          <div>
+            <input placeholder="Text" name="text" type="text" value={rText} onChange={event => setText(event, reminderIndex, dispatch)} required />
           </div>
-          <div className="reminderCardFormRow">
-            <label className="reminderCardFormLabel">City:</label>
-            <input className="reminderCardFormInput" name="city" type="text" value={rCity} onChange={event => setCity(event, reminderIndex, dispatch)} required />
+          <div>
+            <input placeholder="City" name="city" type="text" value={rCity} onChange={event => setCity(event, reminderIndex, dispatch)} required />
           </div>
-          <div className="reminderCardFormRow">
-            <label className="reminderCardFormLabel">Time:</label>
-            <input className="reminderCardFormInput" name="time" type="time" value={rTime} onChange={event => setTime(event, reminderIndex, dispatch)} required />
+          <div>
+            <input name="time" type="time" value={rTime} onChange={event => setTime(event, reminderIndex, dispatch)} required />
           </div>
-          <div className="reminderCardFormRow">
-            <label className="reminderCardFormLabel">Color:</label>
-            <input className="reminderCardFormInput" name="color" type="color" value={rColor} onChange={event => setColor(event, reminderIndex, dispatch)} required />
+          <div>
+            <input name="color" type="color" value={rColor} onChange={event => setColor(event, reminderIndex, dispatch)} required />
           </div>
-          <div className="reminderCardFormDone">
-            <input type="submit" className="reminderCardFormDoneButton button" onClick={event => showSetReminder(event, day, reminderIndex, dispatch)} />
+          <div>
+            <input type="submit" className="button" onClick={event => showSetReminder(event, day, reminderIndex, dispatch)} />
           </div>
         </div>
       </div>
