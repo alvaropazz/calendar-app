@@ -41,7 +41,7 @@ let ReminderList = ({ day, reminders, dispatch }) => (
               <td className="reminderTableTD">{item.reminderTime}</td>
               <td className="reminderTableTD">{item.reminderColor}</td>
               <td className="reminderTableTD">
-                <button onClick={() => removeReminderItem(index, dispatch)}>
+                <button type="button" onClick={() => removeReminderItem(index, dispatch)}>
                   <span>x</span>
                 </button>
               </td>
@@ -50,12 +50,11 @@ let ReminderList = ({ day, reminders, dispatch }) => (
         </tbody>
       </table>
       <div className="reminderCardFormDone reminderCardTableDone">
-        <button className="reminderCardFormDoneButton button" onClick={event => openReminderList(event, dispatch)}>
+        <button type="button" className="reminderCardFormDoneButton button" onClick={event => openReminderList(event, dispatch)}>
           Done
         </button>
       </div>
     </div>
-    {/* <div className="overlay" /> */}
   </div>
 );
 

@@ -17,13 +17,4 @@ const WeatherCardComponent = ({
   );
 };
 
-// WeatherCardComponent.propTypes = {
-//   city: React.PropTypes.string,
-//   date: React.PropTypes.string,
-//   description: React.PropTypes.string,
-//   temp: React.PropTypes.number,
-//   tempMin: React.PropTypes.number,
-//   tempMax: React.PropTypes.number,
-// };
-
 export default WeatherCardComponent;

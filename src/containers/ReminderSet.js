@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import {
   setReminder, setReminderText, setReminderCity, setReminderTime, setReminderColor,
@@ -71,15 +71,6 @@ let ReminderSet = ({ reminderData, dispatch }) => {
 
     </form>
   );
-};
-
-ReminderSet.propTypes = {
-  reminderData: PropTypes.shape({
-    reminderText: PropTypes.string,
-    reminderCity: PropTypes.string,
-    reminderTime: PropTypes.string,
-    reminderColor: PropTypes.string,
-  }),
 };
 
 ReminderSet = connect()(ReminderSet);

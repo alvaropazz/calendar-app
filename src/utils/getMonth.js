@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import moment from 'moment';
 import 'moment-range';
 

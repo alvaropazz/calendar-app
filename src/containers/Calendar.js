@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import getMonth from '../utils/getMonth'; //
@@ -7,7 +7,6 @@ import PreviousMonthButton from './PreviousMonthButton';
 import {
   renderAddReminderButton, renderCalendarWeeks, renderReminderList, renderReminderPanel,
 } from '../components/reminderComponents';
-import './Calendar.css';
 
 let Calendar = ({ calendarData, reminderData }) => {
   const { month, year } = calendarData;
@@ -35,14 +34,6 @@ let Calendar = ({ calendarData, reminderData }) => {
       {renderReminderList(day, showRemindersDisplay, remindersArray)}
     </div>
   );
-};
-
-Calendar.propTypes = {
-  calendarData: PropTypes.shape({
-    month: PropTypes.number,
-    year: PropTypes.number,
-  }),
-  day: PropTypes.object,
 };
 
 Calendar = connect()(Calendar);

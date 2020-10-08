@@ -12,7 +12,7 @@ const initialState = {
 
 const calendarReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'NEXT_MONTH':
+    case 'NEXT_MONTH': {
       let nextMonth = action.month + 1;
       let nextYear = state.year;
       if (action.month === 11) {
@@ -20,8 +20,8 @@ const calendarReducer = (state = initialState, action) => {
         nextYear += 1;
       }
       return { ...state, month: nextMonth, year: nextYear };
-
-    case 'PREVIOUS_MONTH':
+    }
+    case 'PREVIOUS_MONTH': {
       let previousMonth = action.month - 1;
       let previousYear = state.year;
       if (action.month === 0) {
@@ -29,7 +29,7 @@ const calendarReducer = (state = initialState, action) => {
         previousYear -= 1;
       }
       return { ...state, month: previousMonth, year: previousYear };
-
+    }
     default:
       return state;
   }
