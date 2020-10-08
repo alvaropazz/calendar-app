@@ -35,9 +35,9 @@ let ReminderSet = ({ reminderData, dispatch }) => {
   const reminderIndex = reminders[day.format('DD-MM-YYYY')].length - 1;
   const reminder = reminders[day.format('DD-MM-YYYY')];
   const rText = reminder[reminderIndex].reminderText || '';
-  const rCity = reminder[reminderIndex].reminderCity;
-  const rTime = reminder[reminderIndex].reminderTime;
-  const rColor = reminder[reminderIndex].reminderColor;
+  const rCity = reminder[reminderIndex].reminderCity || '';
+  const rTime = reminder[reminderIndex].reminderTime || '';
+  const rColor = reminder[reminderIndex].reminderColor || '';
   return (
     <form>
       <div className="reminderCard centered">

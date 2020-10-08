@@ -50,20 +50,20 @@ export const setReminderText = (reminderText, reminderIndex) => ({
   reminderIndex,
 });
 
-export const setReminderCity = (reminderCity, ReminderIndex) => ({
+export const setReminderCity = (reminderCity, reminderIndex) => ({
   type: SET_REMINDER_CITY,
   reminderCity,
-  ReminderIndex,
+  reminderIndex,
 });
 
-export const setReminderTime = (reminderTime, ReminderIndex) => ({
+export const setReminderTime = (reminderTime, reminderIndex) => ({
   type: SET_REMINDER_TIME,
   reminderTime,
-  ReminderIndex,
+  reminderIndex,
 });
 
-export const setReminderColor = (reminderColor, ReminderIndex) => ({
+export const setReminderColor = (reminderColor, reminderIndex) => ({
   type: SET_REMINDER_COLOR,
   reminderColor,
-  ReminderIndex,
+  reminderIndex,
 });
